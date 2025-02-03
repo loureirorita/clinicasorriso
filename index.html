@@ -4,59 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clínica Sorriso</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Adicionar biblioteca do Slick Carousel -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            background: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        #menu {
+            width: 250px;
+            height: 100vh;
+            background: #0077b6;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #menu h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        #menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            font-size: 18px;
+            width: 100%;
+            text-align: center;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+        #menu a:hover {
+            background: #0096c7;
+        }
+        .content {
+            margin-left: 270px;
+            padding: 40px;
+            width: calc(100% - 270px);
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+        .carousel-inner img {
+            border-radius: 15px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Menu à esquerda -->
-        <nav class="sidebar">
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#contactos">Contactos</a></li>
-            </ul>
-        </nav>
-
-        <!-- Conteúdo principal -->
-        <main class="content">
-            <section id="inicio">
-                <h1>Bem-vindo à Clínica Sorriso</h1>
-                <p>Morada: Rua do Sorriso, 123, 1234-567 Lisboa</p>
-
-                <!-- Carrossel de fotos -->
-                <div class="carrossel">
-                    <div><img src="images/foto1.jpg" alt="Foto 1 da Clínica"></div>
-                    <div><img src="images/foto2.jpg" alt="Foto 2 da Clínica"></div>
-                    <div><img src="images/foto3.jpg" alt="Foto 3 da Clínica"></div>
-                </div>
-            </section>
-
-            <section id="contactos">
-                <h2>Contactos</h2>
-                <p>Email: <a href="mailto:clinicasorriso@example.com">clinicasorriso@example.com</a></p>
-                <p>Instagram: <a href="https://www.instagram.com/clinicasorriso" target="_blank">@clinicasorriso</a></p>
-                <p>Facebook: <a href="https://www.facebook.com/clinicasorriso" target="_blank">Clínica Sorriso</a></p>
-            </section>
-        </main>
+    <div id="menu">
+        <h2>Clínica Sorriso</h2>
+        <a href="index.html">Início</a>
+        <a href="contactos.html">Contactos</a>
     </div>
-
-    <!-- Scripts para o carrossel -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.carrossel').slick({
-                dots: true,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 1,
-                adaptiveHeight: true,
-                autoplay: true,
-                autoplaySpeed: 2000
-            });
-        });
-    </script>
+    
+    <div class="content">
+        <section id="inicio">
+            <h2>Bem-vindo à Clínica Sorriso</h2>
+            <p><strong>Morada:</strong> Rua da Saúde, 123, Lisboa</p>
+            
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imagem1.jpg" class="d-block w-100" alt="Foto da Clínica">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagem2.jpg" class="d-block w-100" alt="Sala de Espera">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagem3.jpg" class="d-block w-100" alt="Consultório">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </section>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
