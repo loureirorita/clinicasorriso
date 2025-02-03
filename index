@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Sorriso</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Adicionar biblioteca do Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <!-- Menu à esquerda -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#contactos">Contactos</a></li>
+            </ul>
+        </nav>
+
+        <!-- Conteúdo principal -->
+        <main class="content">
+            <section id="inicio">
+                <h1>Bem-vindo à Clínica Sorriso</h1>
+                <p>Morada: Rua do Sorriso, 123, 1234-567 Lisboa</p>
+
+                <!-- Carrossel de fotos -->
+                <div class="carrossel">
+                    <div><img src="images/foto1.jpg" alt="Foto 1 da Clínica"></div>
+                    <div><img src="images/foto2.jpg" alt="Foto 2 da Clínica"></div>
+                    <div><img src="images/foto3.jpg" alt="Foto 3 da Clínica"></div>
+                </div>
+            </section>
+
+            <section id="contactos">
+                <h2>Contactos</h2>
+                <p>Email: <a href="mailto:clinicasorriso@example.com">clinicasorriso@example.com</a></p>
+                <p>Instagram: <a href="https://www.instagram.com/clinicasorriso" target="_blank">@clinicasorriso</a></p>
+                <p>Facebook: <a href="https://www.facebook.com/clinicasorriso" target="_blank">Clínica Sorriso</a></p>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts para o carrossel -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.carrossel').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 2000
+            });
+        });
+    </script>
+</body>
+</html>
